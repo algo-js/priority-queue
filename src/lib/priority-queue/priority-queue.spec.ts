@@ -48,3 +48,50 @@ test('size', t => {
   queue.dequeue();
   t.is(queue.size, 0);
 });
+
+test('default priority', t => {
+  const queue = new PriorityQueue<Item>();
+
+  queue.queue({ id: 3 }, -2);
+  queue.queue({ id: 1 });
+  queue.queue({ id: 1 });
+  queue.queue({ id: 2 }, -1);
+
+  t.deepEqual(queue.dequeue(), { id: 1 });
+  t.deepEqual(queue.dequeue(), { id: 1 });
+  t.deepEqual(queue.dequeue(), { id: 2 });
+  t.deepEqual(queue.dequeue(), { id: 3 });
+});
+
+test('duplicate throws error', t => {
+  const queue = new PriorityQueue<number>();
+
+  const value = 42;
+
+  queue.queue(value);
+
+  const reason = t.throws(() => {
+    queue.queue(value, 24);
+  });
+
+  t.is(reason.message, 'Cannot add element that already exist');
+});
+
+test('add/poll throws error', t => {
+  t.plan(2);
+
+  const queue = new PriorityQueue<any>();
+  let errors = 0;
+
+  try {
+    queue.add('value');
+  } catch (e) {
+    t.is(++errors, 1);
+  }
+
+  try {
+    queue.poll();
+  } catch (e) {
+    t.is(++errors, 2);
+  }
+});

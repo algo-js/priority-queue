@@ -75,10 +75,16 @@ export class PriorityQueue<T> extends MaxHeapTree<T> implements Queue<T> {
     return element;
   }
 
+  /**
+   * @private
+   */
   public add(element: T): this {
     throw new Error('Use `queue` method instead');
   }
 
+  /**
+   * @private
+   */
   public poll(): T {
     throw new Error('Use `dequeue` method instead');
   }
