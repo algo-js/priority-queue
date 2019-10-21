@@ -95,3 +95,14 @@ test('add/poll throws error', t => {
     t.is(++errors, 2);
   }
 });
+
+test('high load', t => {
+  const queue = new PriorityQueue<Item>();
+  const maxId = 1e6;
+
+  for (let i = 1; i <= maxId; ++i) {
+    queue.queue({ id: i }, i);
+  }
+
+  t.deepEqual(queue.dequeue(), { id: maxId });
+});
