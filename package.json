@@ -1,6 +1,6 @@
 {
   "name": "@algo-js/priority-queue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fast heap-based priority queue for production",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
