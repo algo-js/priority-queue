@@ -65,7 +65,7 @@ export class PriorityQueue<T> extends MaxHeapTree<T> implements Queue<T> {
   /**
    * @returns {*}
    */
-  public dequeue(): T {
+  public dequeue(): T | undefined {
     const element = super.poll();
 
     if (element) {
@@ -77,6 +77,7 @@ export class PriorityQueue<T> extends MaxHeapTree<T> implements Queue<T> {
 
   /**
    * @private
+   * @deprecated
    */
   public add(element: T): this {
     throw new Error('Use `queue` method instead');
@@ -84,6 +85,7 @@ export class PriorityQueue<T> extends MaxHeapTree<T> implements Queue<T> {
 
   /**
    * @private
+   * @deprecated
    */
   public poll(): T {
     throw new Error('Use `dequeue` method instead');

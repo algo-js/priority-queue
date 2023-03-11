@@ -1,3 +1,3 @@
 # @algo-js/priority-queue
 
-Fast heap-based priority queue for production
+Fastest heap-based production-ready priority queue fully written on TypeScript
