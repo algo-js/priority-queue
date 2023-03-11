@@ -77,7 +77,7 @@ test('duplicate throws error', t => {
   t.is(reason.message, 'Cannot add element that already exist');
 });
 
-test('add/poll throws error', t => {
+test('add/poll throws errors', t => {
   t.plan(2);
 
   const queue = new PriorityQueue<any>();
