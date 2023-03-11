@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@algo-js/core/-/core-1.3.1.tgz#aa80e6f0ec7b874d622411db8ad9fe1f1d5bfde4"
   integrity sha512-e4VY6FosUqmygLtZbsaUNyEDXQcs/B4pTvVwdqd09Q02x3uVdTfRsoxg0aCKHB7ba09AHWBbhUTVe0OCXd82VQ==
 
-"@algo-js/heap-tree@^1.1.9":
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/@algo-js/heap-tree/-/heap-tree-1.1.9.tgz#0321ae2bf2e60ff3b81a9ae664be675ab14ff58e"
-  integrity sha512-WiHht2pGA+XXDQyOgdfAyFcK/hG52wcnNBKHEeO5jIUZB4sD0aOL2o6DRItnv47nn1HZGvHcvO3L8y58uQpmHw==
+"@algo-js/heap-tree@^1.1.10":
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/@algo-js/heap-tree/-/heap-tree-1.1.10.tgz#7a29e8492256794773ad230ed5723ef6c2ae0e1d"
+  integrity sha512-WGSIe1UQa1jDGPpseekWqLr2bh30Jpabw93wkU8MAFzDntwZ67I0rsWJNE8B6zl3P671CM1lSy95FY7L0knX/A==
   dependencies:
     "@algo-js/core" "^1.3.1"
 

@@ -49,7 +49,7 @@
     "node": ">=8.9"
   },
   "dependencies": {
-    "@algo-js/heap-tree": "^1.1.9"
+    "@algo-js/heap-tree": "^1.1.10"
   },
   "devDependencies": {
     "@bitjson/npm-scripts-info": "^1.0.0",
