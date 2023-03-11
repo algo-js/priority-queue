@@ -2,7 +2,7 @@ import { MaxHeapTree } from '@algo-js/heap-tree';
 
 export interface Queue<T> {
   queue: (item: T, priority: number) => this;
-  dequeue: () => T;
+  dequeue: () => T | undefined;
 
   readonly size: number;
 }
@@ -87,7 +87,7 @@ export class PriorityQueue<T> extends MaxHeapTree<T> implements Queue<T> {
    * @private
    * @deprecated
    */
-  public poll(): T {
+  public poll(): T | undefined {
     throw new Error('Use `dequeue` method instead');
   }
 }

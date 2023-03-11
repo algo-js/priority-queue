@@ -19,8 +19,8 @@ test('queue/dequeue', t => {
   t.deepEqual(queue.dequeue(), { id: 3 });
   t.deepEqual(queue.dequeue(), { id: 1 });
 
-  t.deepEqual(queue.peek(), null);
-  t.deepEqual(queue.dequeue(), null);
+  t.deepEqual(queue.peek(), undefined);
+  t.deepEqual(queue.dequeue(), undefined);
 });
 
 test('size', t => {
